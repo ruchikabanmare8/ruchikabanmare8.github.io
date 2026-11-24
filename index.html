@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruchika Banmare – ERP and learning operations</title>
+<meta name="description" content="Ruchika Banmare, MBA (IIM Nagpur). ERP program lead who implements LMS, academic and outcome-based education systems for universities and hospitals.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231F3864'/%3E%3Ctext x='32' y='44' font-size='34' text-anchor='middle' fill='white' font-family='Georgia,serif'%3ERB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F9FC;
+    --ink: #101B34;
+    --muted: #4A5873;
+    --navy: #1F3864;
+    --rule: #D3DAE6;
+    --accent: #0B6E75;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-underline-offset: 3px; }
+  a:hover { color: var(--navy); }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+
+  /* top bar */
+  header.bar { border-bottom: 1px solid var(--rule); }
+  header.bar .wrap { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: center; justify-content: space-between; padding-top: 18px; padding-bottom: 18px; }
+  .brand { font-family: var(--serif); font-weight: 600; font-size: 20px; color: var(--navy); text-decoration: none; }
+  nav a { color: var(--ink); text-decoration: none; margin-right: 22px; font-size: 15px; font-weight: 500; }
+  nav a:last-child { margin-right: 0; }
+  nav a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 5px; }
+
+  /* hero */
+  .hero { padding: 88px 0 72px; }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(38px, 6.4vw, 68px);
+    line-height: 1.06;
+    letter-spacing: -0.015em;
+    color: var(--navy);
+    margin: 0 0 28px;
+    max-width: 16em;
+  }
+  .hero p.lead { font-size: 20px; max-width: 34em; margin: 0 0 14px; }
+  .hero p.sub { color: var(--muted); max-width: 38em; margin: 0 0 36px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 4px; font-weight: 600; font-size: 16px; text-decoration: none; border: 2px solid var(--navy); }
+  .btn.primary { background: var(--navy); color: #fff; }
+  .btn.primary:hover { background: var(--ink); border-color: var(--ink); color: #fff; }
+  .btn.ghost { background: transparent; color: var(--navy); }
+  .btn.ghost:hover { background: var(--navy); color: #fff; }
+
+  /* sections */
+  section { padding: 64px 0; border-top: 1px solid var(--rule); }
+  h2 { font-family: var(--serif); font-weight: 600; font-size: 32px; line-height: 1.2; color: var(--navy); margin: 0 0 8px; }
+  .intro { color: var(--muted); max-width: 40em; margin: 0 0 40px; }
+
+  /* case studies */
+  .case { display: grid; grid-template-columns: 220px 1fr; gap: 12px 40px; padding: 32px 0; border-top: 1px solid var(--rule); }
+  .case:first-of-type { border-top: 0; padding-top: 8px; }
+  .case h3 { font-family: var(--serif); font-weight: 600; font-size: 23px; line-height: 1.25; margin: 0; color: var(--ink); }
+  .case .tag { display: block; margin-top: 8px; font-family: var(--sans); font-size: 14px; font-weight: 400; color: var(--muted); }
+  .case dl { margin: 0; display: grid; grid-template-columns: 84px 1fr; gap: 10px 20px; }
+  .case dt { font-weight: 600; color: var(--navy); }
+  .case dd { margin: 0; max-width: 38em; }
+  .case dd.result { font-weight: 500; }
+
+  /* experience */
+  .job { display: grid; grid-template-columns: 220px 1fr; gap: 6px 40px; padding: 22px 0; border-top: 1px solid var(--rule); }
+  .job:first-of-type { border-top: 0; }
+  .job .when { color: var(--muted); font-size: 15px; }
+  .job h3 { margin: 0 0 4px; font-size: 18px; font-weight: 600; }
+  .job p { margin: 0; max-width: 40em; }
+
+  /* skills */
+  .skills { display: grid; grid-template-columns: 220px 1fr; gap: 14px 40px; margin: 0; }
+  .skills dt { font-weight: 600; color: var(--navy); }
+  .skills dd { margin: 0; max-width: 40em; }
+
+  footer { padding: 56px 0 72px; border-top: 1px solid var(--rule); }
+  footer h2 { margin-bottom: 14px; }
+  footer p { margin: 0 0 8px; }
+  .fine { color: var(--muted); font-size: 14px; margin-top: 28px; }
+
+  @media (max-width: 720px) {
+    body { font-size: 16px; }
+    .hero { padding: 56px 0 48px; }
+    .case, .job, .skills { grid-template-columns: 1fr; gap: 10px; }
+    .case dl { grid-template-columns: 72px 1fr; gap: 8px 14px; }
+    section { padding: 48px 0; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">Ruchika Banmare</a>
+    <nav aria-label="Sections">
+      <a href="#work">Selected work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap">
+    <div class="hero">
+      <h1>I make learning systems work for the people who use them.</h1>
+      <p class="lead">I run ERP programs for universities and hospitals: the LMS, academic, outcome-based education and feedback modules, from requirements to go-live and adoption.</p>
+      <p class="sub">MBA, IIM Nagpur. Four years across IT operations at Accenture and program management at Adani Healthcare and Education in Nagpur. Currently ERP Project Lead across six institutions.</p>
+      <div class="actions">
+        <a class="btn primary" href="Ruchika_Banmare_CV.pdf">Download CV</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/ruchika-banmare-a4ab1917b/">LinkedIn</a>
+        <a class="btn ghost" href="mailto:ruchikabanmare8@gmail.com">Email me</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <h2>Selected work</h2>
+      <p class="intro">Six problems I found, what I did about them, and what changed. Each one comes from live ERP and IT operations work.</p>
+
+      <article class="case">
+        <h3>Getting faculty to use the LMS<span class="tag">Mastersoft ERP, LMS module</span></h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>Faculty, many of them senior doctors, rarely used the LMS to set assignments. The module needed too many clicks and had steps nobody needed.</dd>
+          <dt>Action</dt>
+          <dd>I ran several training sessions and collected what faculty found hard. Then I showed the vendor that the workflow itself was the problem, not just training, and recommended removing the unnecessary steps.</dd>
+          <dt>Result</dt>
+          <dd class="result">Faculty adoption rose from about 40% to about 85%.</dd>
+        </dl>
+      </article>
+
+      <article class="case">
+        <h3>One attendance record for every online class<span class="tag">Microsoft Teams and ERP integration</span></h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>Online classes ran on Teams, but students often joined with personal email addresses, so their student numbers were not captured.</dd>
+          <dt>Action</dt>
+          <dd>I defined how Teams users map to the student master, what happens to unmatched emails, and how to block a duplicate login on a shared link. I also specified how repeated joins and leaves combine into one record.</dd>
+          <dt>Result</dt>
+          <dd class="result">Attendance is built around one verified record per student per class, based on actual active time.</dd>
+        </dl>
+      </article>
+
+      <article class="case">
+        <h3>Designing the learning modules<span class="tag">Academic, OBE and feedback modules</span></h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>The institution needed course offering, teacher allotment, registration, timetables and outcome tracking to run inside the ERP, with students and faculty able to finish tasks easily.</dd>
+          <dt>Action</dt>
+          <dd>I wrote the BRDs and SRS, designed the process flows for faculty, student and administrator journeys, and designed the Course Outcome and Program Outcome (OBE) module. I configured the masters, ran UAT and trained users.</dd>
+          <dt>Result</dt>
+          <dd class="result">Course outcomes link to program outcomes in the system, and a feedback module collects student and faculty views. Satisfaction improved because tasks became easier.</dd>
+        </dl>
+      </article>
+
+      <article class="case">
+        <h3>A production issue, fixed safely<span class="tag">ERP resignation workflow</span></h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>After go-live, a workflow that had passed UAT showed employees’ resignation details to every user.</dd>
+          <dt>Action</dt>
+          <dd>I treated it as urgent, rolled the workflow back and had the vendor stop the feature. The permanent fix followed a root-cause analysis, a change request, a fix, UAT, approval and validation in production.</dd>
+          <dt>Result</dt>
+          <dd class="result">The exposure was contained straight away and the workflow returned with the access problem fixed.</dd>
+        </dl>
+      </article>
+
+      <article class="case">
+        <h3>Telling hospital admins who is on leave tomorrow<span class="tag">Hospital operations dashboard</span></h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>Administrators could not see which doctors would be absent the next day, so patients reached the OPD and only then found out.</dd>
+          <dt>Action</dt>
+          <dd>I built a doctor leave and attendance dashboard for building administrators.</dd>
+          <dt>Result</dt>
+          <dd class="result">Administrators plan the next day’s OPD in advance.</dd>
+        </dl>
+      </article>
+
+      <article class="case">
+        <h3>Cutting a connection check from 15 minutes to 1<span class="tag">Accenture, managed file transfer</span></h3>
+        <dl>
+          <dt>Problem</dt>
+          <dd>Checking a subscriber connection meant logging in by hand, and each check took 10 to 15 minutes.</dd>
+          <dt>Action</dt>
+          <dd>The folder already had its rule configured, so I proposed dropping a dummy test file into it and letting the rule send the result by email.</dd>
+          <dt>Result</dt>
+          <dd class="result">The check takes about one minute with no manual login.</dd>
+        </dl>
+      </article>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <h2>Experience</h2>
+      <p class="intro">From IT service operations to leading enterprise programs.</p>
+
+      <div class="job">
+        <div class="when">August 2025 to present</div>
+        <div>
+          <h3>ERP Project Lead, Adani Healthcare and Education (DMIHER), Nagpur</h3>
+          <p>Lead a ₹6.5 Cr ERP rollout across six institutions with 94% user adoption and zero post-go-live SLA breaches. I handle the academic, examination, OBE, LMS, hostel, library, placement, alumni, HR and establishment modules, and negotiated a ₹75 Lakhs saving on vendor customization costs.</p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">April to August 2025</div>
+        <div>
+          <h3>Executive Assistant, Director’s Office</h3>
+          <p>Tracked strategic initiatives across 20+ departments and built MIS dashboards for leadership. Halved the average length of stay in 200+ patient camps, from four days to two.</p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2024</div>
+        <div>
+          <h3>Product Management Intern, Arnifi, Bangalore</h3>
+          <p>Wrote product requirements for a chatbot, led a WhatsApp chatbot rollout and managed SEO content that lifted impressions by 25%.</p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">September 2020 to May 2023</div>
+        <div>
+          <h3>Quality Engineer Analyst, Accenture</h3>
+          <p>Resolved 200+ incidents in managed file transfer while meeting SLAs, and cut recurring issues by 45% through root-cause analysis.</p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="when">2020 and 2025</div>
+        <div>
+          <h3>Education</h3>
+          <p>MBA, General Management, IIM Nagpur (2025). B.E., Electronics and Telecommunication, G. H. Raisoni College of Engineering, Nagpur (2020).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <h2>Skills</h2>
+      <p class="intro">What I use day to day, and what I hold certificates in.</p>
+      <dl class="skills">
+        <dt>Learning operations</dt>
+        <dd>LMS management, course offering, teacher allotment, bulk registration, timetables, OBE (CO/PO), feedback analysis, online class operations</dd>
+        <dt>Program delivery</dt>
+        <dd>BRD and SRS, requirements, gap analysis, UAT, go-live and hypercare, vendor management, stakeholder alignment, RACI, Agile governance</dd>
+        <dt>Operations and quality</dt>
+        <dd>Incident management, root-cause analysis, SLA and TAT management, process improvement, ServiceNow, Splunk, Jira</dd>
+        <dt>Reporting</dt>
+        <dd>MIS and KPI dashboards, Excel, Power BI, Looker Studio, SQL</dd>
+        <dt>Certificates</dt>
+        <dd>Project and Program Management (Great Learning), Lean Six Sigma (KPMG), ServiceNow, Google Foundations of Project Management</dd>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>I’m open to learning operations and program management roles, including remote work.</p>
+    <p><a href="mailto:ruchikabanmare8@gmail.com">ruchikabanmare8@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/ruchika-banmare-a4ab1917b/">linkedin.com/in/ruchika-banmare-a4ab1917b</a></p>
+    <p class="fine">Based in Nagpur, India. Case studies describe my own work and leave out institutional data.</p>
+  </div>
+</footer>
+
+</body>
+</html>
